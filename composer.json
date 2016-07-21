@@ -1,0 +1,17 @@
+{
+  "name": "JSON-Schema-research",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Roman Kuzmin",
+      "email": "roman.kuzmin3333@gmail.com"
+    }
+  ],
+  /*"config": {
+    "disable-tls": true,
+    "secure-http": false
+  },*/
+  "require": {
+    "phpunit/phpunit": "5.5.x-dev"
+  }
+}

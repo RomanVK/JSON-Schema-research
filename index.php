@@ -1,10 +1,14 @@
+<?php
+
+?>
+
 <html>
 
 <head>
-	<title>Hello</title>
+	<title><?php echo __DIR__; ?></title>
 </head>
 
 <body>
-	<h1><?php $hello = "hello"; echo $hello; ?></h1>
+	<h1><?php echo __FILE__; ?></h1>
 </body>
 </html>
