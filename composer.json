@@ -7,11 +7,12 @@
       "email": "roman.kuzmin3333@gmail.com"
     }
   ],
-  /*"config": {
+  "config": {
     "disable-tls": true,
     "secure-http": false
-  },*/
+  },
   "require": {
-    "phpunit/phpunit": "5.5.x-dev"
+    "phpunit/phpunit": "5.5.x-dev",
+    "justinrainbow/json-schema": "2.0.5"
   }
 }
