@@ -1,0 +1,33 @@
+{
+  "id": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "comment": "Schema for user validation during registration",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string",
+      "minLength": 4,
+      "maxLength": 256
+    },
+    "last_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[a-zA-Z0-9_]+$"
+    },
+    "first_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[a-zA-Z0-9_]+$"
+    },
+    "picture": {
+      "type": "string"
+    }
+  },
+  "required": ["email", "password", "first_name"],
+  "additionalProperties": false
+}
