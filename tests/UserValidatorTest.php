@@ -4,10 +4,25 @@ require_once(__DIR__ . '/../src/UserValidator.php');
 
 class UserValidatorTest extends PHPUnit_Framework_TestCase
 {
-    public  function testIsValidUser()
+    /**
+     * @var UserValidator
+     */
+    private $user_validator;
+
+    public function setUp()
     {
-        $json = file_get_contents(__DIR__ . '/../tests/user_data_example.json');
-        $user_validator = new UserValidator();
-        $this->assertTrue($user_validator->isValidUser($json));
+        $this->user_validator = new UserValidator();
+    }
+
+    public  function testIsValidUserReturnTrue()
+    {
+        $json = file_get_contents(__DIR__ . '/../tests/user_data_valid.json');
+        $this->assertTrue($this->user_validator->isValidUser($json));
+    }
+
+    public  function testIsValidUserReturnFalse()
+    {
+        $json = file_get_contents(__DIR__ . '/../tests/user_data_invalid.json');
+        $this->assertFalse($this->user_validator->isValidUser($json));
     }
 }
